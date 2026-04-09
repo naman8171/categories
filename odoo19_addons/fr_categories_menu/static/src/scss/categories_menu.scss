@@ -1,0 +1,204 @@
+.fr-categories-wrapper {
+  --fr-bg-black: #000000;
+  --fr-bg-header: #2f3136;
+  --fr-bg-submenu: #181a1f;
+  --fr-bg-thumb: #f4f4f4;
+  --fr-accent-red: #e02127;
+  --fr-accent-red-line: #da1e24;
+  --fr-text-white: #f4f4f4;
+  --fr-text-gold: #cb9f33;
+  --fr-border-dark: #17191f;
+
+  background: linear-gradient(90deg, #5f5f5f 0%, #6a6a6a 100%);
+  padding: 28px 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .container {
+    max-width: 1240px;
+  }
+
+  .fr-toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .fr-toolbar__button {
+    border: 1px solid #3b3e44;
+    background: #202227;
+    color: var(--fr-text-white);
+    padding: 10px 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .fr-toolbar__button.is-active {
+    background: var(--fr-accent-red);
+    border-color: var(--fr-accent-red);
+  }
+
+  .fr-catalog {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 12px;
+    background: var(--fr-bg-black);
+    padding: 12px;
+  }
+
+  .is-hidden {
+    display: none;
+  }
+
+  .fr-panel-title {
+    margin: 0;
+    background: var(--fr-bg-header);
+    color: var(--fr-text-white);
+    font-size: 26px;
+    font-weight: 700;
+    padding: 12px 16px;
+    text-transform: uppercase;
+  }
+
+  .fr-categories-panel,
+  .fr-products-panel {
+    min-height: 760px;
+    background: var(--fr-bg-black);
+  }
+
+  .fr-category-list {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    border: 1px solid #101218;
+  }
+
+  .fr-category-item,
+  .fr-submenu-item {
+    min-height: 44px;
+    border-bottom: 1px solid var(--fr-border-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background: linear-gradient(180deg, #11141a 0%, #0b0d12 100%);
+    color: var(--fr-text-white);
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  .fr-category-item span {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .fr-category-item.is-highlighted {
+    background: var(--fr-accent-red);
+  }
+
+  .fr-category-item.is-expanded {
+    border-bottom: 0;
+  }
+
+  .fr-submenu-item {
+    justify-content: flex-start;
+    padding-left: 54px;
+    background: linear-gradient(180deg, #1f2024 0%, var(--fr-bg-submenu) 100%);
+    color: var(--fr-text-gold);
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .fr-product-row {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 240px 1fr 110px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    background: #fff;
+    color: #151515;
+  }
+
+  .fr-product-thumb {
+    background: var(--fr-bg-thumb);
+    min-height: 270px;
+    border-right: 2px solid #121212;
+  }
+
+  .fr-product-thumb.gold {
+    background: #f0edd9;
+  }
+
+  .fr-product-info {
+    padding: 22px 18px;
+  }
+
+  .fr-product-info h3 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .fr-product-ref {
+    margin: 0;
+    font-size: 32px;
+    color: var(--fr-accent-red);
+    font-weight: 700;
+  }
+
+  .fr-product-info ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .fr-price-btn {
+    margin: 16px;
+    align-self: start;
+    border: 0;
+    background: #d6d6d6;
+    color: #292929;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+
+  .fr-tile-grid {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  .fr-tile {
+    background: var(--fr-bg-black);
+  }
+
+  .fr-tile-thumb {
+    height: 220px;
+    background: var(--fr-bg-thumb);
+    border: 12px solid var(--fr-bg-black);
+    border-bottom: 0;
+  }
+
+  .fr-tile h3 {
+    margin: 0;
+    color: var(--fr-text-white);
+    font-size: 31px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 4px 8px;
+    border-bottom: 3px solid var(--fr-accent-red-line);
+  }
+
+  @media (max-width: 991px) {
+    .fr-catalog {
+      grid-template-columns: 1fr;
+    }
+
+    .fr-tile-grid {
+      grid-template-columns: repeat(2, minmax(170px, 1fr));
+    }
+  }
+}

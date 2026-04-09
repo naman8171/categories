@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="categories_menu_component" name="Categories Menu Component">
+        <section class="fr-categories-wrapper" data-name="Categories Module" data-snippet="s_fr_categories_menu">
+            <div class="container">
+                <div class="fr-toolbar">
+                    <button class="fr-toolbar__button is-active" data-view="products" type="button">Categories Dropdown View</button>
+                    <button class="fr-toolbar__button" data-view="submenu" type="button">Submenu View</button>
+                </div>
+
+                <div class="fr-catalog" data-screen="products">
+                    <aside class="fr-categories-panel" aria-label="Categories">
+                        <h2 class="fr-panel-title">CATEGORIES</h2>
+                        <ul class="fr-category-list">
+                            <li class="fr-category-item is-highlighted">VIEW ALL PRODUCTS <span>›</span></li>
+                            <li class="fr-category-item">ANTENNA &amp; FLAGS <span>›</span></li>
+                            <li class="fr-category-item">AXLE PEGS <span>›</span></li>
+                            <li class="fr-category-item">BANNER <span>›</span></li>
+                            <li class="fr-category-item">BASKETS <span>›</span></li>
+                            <li class="fr-category-item">BAT HOLDER <span>›</span></li>
+                            <li class="fr-category-item">BEARINGS <span>›</span></li>
+                            <li class="fr-category-item">BELLS &amp; HORNS <span>›</span></li>
+                            <li class="fr-category-item">BICYCLES <span>›</span></li>
+                            <li class="fr-category-item">BOTTOM BRACKETS <span>›</span></li>
+                            <li class="fr-category-item">BRAKES <span>›</span></li>
+                            <li class="fr-category-item">BUMPERS <span>›</span></li>
+                        </ul>
+                    </aside>
+
+                    <section class="fr-products-panel" aria-label="Products">
+                        <h2 class="fr-panel-title">PRODUCTS</h2>
+                        <article class="fr-product-row">
+                            <div class="fr-product-thumb"></div>
+                            <div class="fr-product-info">
+                                <p class="fr-product-ref">REF#: 103303</p>
+                                <h3>LOWRIDER TWISTED ANTENNA CHROME.</h3>
+                                <ul>
+                                    <li>Style: Square Twisted</li>
+                                    <li>Length: 2 3/4 ft (32 Inch)</li>
+                                    <li>Spring: 2 1/2</li>
+                                    <li>Bracket: 2 1/4</li>
+                                    <li>Color: Chrome</li>
+                                </ul>
+                            </div>
+                            <button class="fr-price-btn" type="button">PRICE →</button>
+                        </article>
+                        <article class="fr-product-row">
+                            <div class="fr-product-thumb gold"></div>
+                            <div class="fr-product-info">
+                                <p class="fr-product-ref">REF#: 103315</p>
+                                <h3>LOWRIDER TWISTED ANTENNA GOLD.</h3>
+                                <ul>
+                                    <li>Style: Square Twisted</li>
+                                    <li>Length: 2 3/4 ft (32 Inch)</li>
+                                    <li>Spring: 2 1/2</li>
+                                    <li>Bracket: 2 1/4</li>
+                                    <li>Color: Gold</li>
+                                </ul>
+                            </div>
+                            <button class="fr-price-btn" type="button">PRICE →</button>
+                        </article>
+                    </section>
+                </div>
+
+                <div class="fr-catalog is-hidden" data-screen="submenu">
+                    <aside class="fr-categories-panel" aria-label="Categories with submenu">
+                        <h2 class="fr-panel-title">CATEGORIES</h2>
+                        <ul class="fr-category-list">
+                            <li class="fr-category-item">VIEW ALL PRODUCTS <span>›</span></li>
+                            <li class="fr-category-item is-highlighted is-expanded">ANTENNA &amp; FLAGS <span>⌄</span></li>
+                            <li class="fr-submenu-item">VIEW ALL ANTENNA &amp; FLAGS</li>
+                            <li class="fr-submenu-item">CAGE ANTENNAS</li>
+                            <li class="fr-submenu-item">SAFETY FLAGS</li>
+                            <li class="fr-submenu-item">SWEET HEART ANTENNAS</li>
+                            <li class="fr-submenu-item">TWISTED ANTENNAS</li>
+                            <li class="fr-submenu-item">WING ANTENNAS</li>
+                            <li class="fr-category-item">AXLE PEGS <span>›</span></li>
+                            <li class="fr-category-item">BANNER <span>›</span></li>
+                            <li class="fr-category-item">BASKETS <span>›</span></li>
+                            <li class="fr-category-item">BAT HOLDER <span>›</span></li>
+                            <li class="fr-category-item">BEARINGS <span>›</span></li>
+                            <li class="fr-category-item">BELLS &amp; HORNS <span>›</span></li>
+                        </ul>
+                    </aside>
+
+                    <section class="fr-products-panel" aria-label="Antenna and flags submenu products">
+                        <h2 class="fr-panel-title">ANTENNA &amp; FLAGS</h2>
+                        <div class="fr-tile-grid">
+                            <article class="fr-tile"><div class="fr-tile-thumb"></div><h3>VIEW ALL ANTENNA &amp; FLAGS (14)</h3></article>
+                            <article class="fr-tile"><div class="fr-tile-thumb"></div><h3>CAGE ANTENNAS (3)</h3></article>
+                            <article class="fr-tile"><div class="fr-tile-thumb"></div><h3>SAFETY FLAGS (3)</h3></article>
+                            <article class="fr-tile"><div class="fr-tile-thumb"></div><h3>SWEET HEART ANTENNAS (3)</h3></article>
+                            <article class="fr-tile"><div class="fr-tile-thumb"></div><h3>TWISTED ANTENNAS (3)</h3></article>
+                            <article class="fr-tile"><div class="fr-tile-thumb"></div><h3>WING ANTENNAS (2)</h3></article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="categories_preview_page" name="Categories Preview Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <t t-call="fr_categories_menu.categories_menu_component"/>
+            </div>
+        </t>
+    </template>
+</odoo>
